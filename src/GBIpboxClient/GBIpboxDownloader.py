@@ -38,6 +38,7 @@ except ImportError:
 	from urllib import urlencode, quote
 	from urllib2 import urlopen
 
+
 def getValueFromNode(event, key):
 	tmp = event.getElementsByTagName(key)[0].firstChild
 	if (tmp):

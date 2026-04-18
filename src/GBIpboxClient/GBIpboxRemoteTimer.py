@@ -194,14 +194,14 @@ class GBIpboxRemoteTimer():
 						if xend < xbegin:
 							xend += 1440
 						if begin2 < xbegin <= end2:
-							if xend < end2: # recording within event
+							if xend < end2:  # recording within event
 								time_match = (xend - xbegin) * 60
 								type = type_offset + 3
 							else:           # recording last part of event
 								time_match = (end2 - xbegin) * 60
 								type = type_offset + 1
 						elif xbegin <= begin2 <= xend:
-							if xend < end2: # recording first part of event
+							if xend < end2:  # recording first part of event
 								time_match = (xend - begin2) * 60
 								type = type_offset + 4
 							else:           # recording whole event
@@ -209,21 +209,21 @@ class GBIpboxRemoteTimer():
 								type = type_offset + 2
 				else:
 					if begin < x.begin <= end:
-						if timer_end < end: # recording within event
+						if timer_end < end:  # recording within event
 							time_match = timer_end - x.begin
 							type = type_offset + 3
 						else:           # recording last part of event
 							time_match = end - x.begin
 							type = type_offset + 1
 					elif x.begin <= begin <= timer_end:
-						if timer_end < end: # recording first part of event
+						if timer_end < end:  # recording first part of event
 							time_match = timer_end - begin
 							type = type_offset + 4
 						else:           # recording whole event
 							time_match = end - begin
 							type = type_offset + 2
 				if time_match:
-					if type in (2, 7, 12): # When full recording do not look further
+					if type in (2, 7, 12):  # When full recording do not look further
 						returnValue = (time_match, [type], isAutoTimer)
 						break
 					elif returnValue:
