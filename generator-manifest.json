@@ -1,0 +1,24 @@
+{
+  "depends": "",
+  "description": "GBIpboxClient",
+  "legacy_setup": {
+    "description": "",
+    "has_setup_translate": false,
+    "name": "",
+    "package_data": [],
+    "package_dir_value": "",
+    "packages": [],
+    "pkg": "",
+    "version": ""
+  },
+  "module_dir_name": "GBIpboxClient",
+  "package_name": "enigma2-plugin-extensions-g-b-ipbox-client",
+  "plugin_group": "extensions",
+  "source_repo_branch": "master",
+  "source_repo_name": "gbremote-client",
+  "source_repo_url": "https://github.com/oe-mirrors/gbremote-client.git",
+  "target_repo_branch": "main",
+  "target_repo_name": "GBIpboxClient",
+  "target_repo_url": "git@github.com:oe-alliance-plugins/GBIpboxClient.git",
+  "version": "1.0"
+}
