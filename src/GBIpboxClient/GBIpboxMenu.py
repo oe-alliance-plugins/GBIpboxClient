@@ -20,7 +20,6 @@
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
@@ -28,7 +27,7 @@ from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
 from Components.Button import Button
 from Components.ConfigList import ConfigListScreen
-from Components.config import config, getConfigListEntry, ConfigSubsection, ConfigInteger, ConfigYesNo, ConfigText
+from Components.config import config, getConfigListEntry
 from Components.Sources.Boolean import Boolean
 from Components.Sources.StaticText import StaticText
 
@@ -37,7 +36,13 @@ from .GBIpboxScan import GBIpboxScan
 from .GBIpboxAbout import GBIpboxAbout
 from .GBIpboxMount import GBIpboxMount
 from .GBIpboxLocale import _
-from boxbranding import getImageDistro
+
+try:
+	from Components.SystemInfo import BoxInfo
+	IMAGEDISTRO = BoxInfo.getItem("distro")
+except ImportError:
+	from boxbranding import getImageDistro
+	IMAGEDISTRO = getImageDistro()
 
 from enigma import eTimer
 
@@ -100,36 +105,36 @@ class GBIpboxMenu(Screen, ConfigListScreen):
 					font="Regular;18" />
 
 			<ePixmap name="red"
-					 pixmap="skin_default/buttons/red.png"
-					 position="0,360"
-					 size="140,40"
-					 zPosition="4"
-					 transparent="1"
-					 alphatest="on" />
+					pixmap="skin_default/buttons/red.png"
+					position="0,360"
+					size="140,40"
+					zPosition="4"
+					transparent="1"
+					alphatest="on" />
 
 			<ePixmap name="green"
-					 pixmap="skin_default/buttons/green.png"
-					 position="140,360"
-					 size="140,40"
-					 zPosition="4"
-					 transparent="1"
-					 alphatest="on" />
+					pixmap="skin_default/buttons/green.png"
+					position="140,360"
+					size="140,40"
+					zPosition="4"
+					transparent="1"
+					alphatest="on" />
 
 			<ePixmap name="yellow"
-					 pixmap="skin_default/buttons/yellow.png"
-					 position="280,360"
-					 size="140,40"
-					 zPosition="4"
-					 transparent="1"
-					 alphatest="on" />
+					pixmap="skin_default/buttons/yellow.png"
+					position="280,360"
+					size="140,40"
+					zPosition="4"
+					transparent="1"
+					alphatest="on" />
 
 			<ePixmap name="blue"
-					 pixmap="skin_default/buttons/blue.png"
-					 position="420,360"
-					 size="140,40"
-					 zPosition="4"
-					 transparent="1"
-					 alphatest="on" />
+					pixmap="skin_default/buttons/blue.png"
+					position="420,360"
+					size="140,40"
+					zPosition="4"
+					transparent="1"
+					alphatest="on" />
 		</screen>"""
 
 	def __init__(self, session, timerinstance):

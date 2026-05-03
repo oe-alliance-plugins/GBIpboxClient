@@ -20,16 +20,21 @@
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Plugins.Plugin import PluginDescriptor
 
-from Components.config import config, getConfigListEntry, ConfigSubsection, ConfigInteger, ConfigYesNo, ConfigText, ConfigClock, ConfigSelection
+from Components.config import config, ConfigSubsection, ConfigInteger, ConfigYesNo, ConfigText, ConfigClock, ConfigSelection
 from Tools.Directories import fileExists
 from .GBIpboxClient import GBIpboxClient, GBIpboxClientAutostart
 from .GBIpboxRemoteTimer import GBIpboxRemoteTimer
 from .GBIpboxWizard import GBIpboxWizard
 from .GBIpboxLocale import _
-from boxbranding import getImageDistro
+
+try:
+	from Components.SystemInfo import BoxInfo
+	IMAGEDISTRO = BoxInfo.getItem("distro")
+except ImportError:
+	from boxbranding import getImageDistro
+	IMAGEDISTRO = getImageDistro()
 
 config.ipboxclient = ConfigSubsection()
 config.ipboxclient.host = ConfigText(default="", fixed_size=False)
@@ -51,7 +56,7 @@ def ipboxclientRecordTimer():
 
 
 def ipboxclientStart(menuid, **kwargs):
-	if getImageDistro() in ("openatv", "openbh"):
+	if IMAGEDISTRO in ("openatv", "openbh"):
 		if menuid == "scan":
 			return [(_("IPBOX Client"), GBIpboxClient, "ipbox_client_Start", 13)]
 		else:
@@ -72,7 +77,7 @@ def getHasTuners():
 
 
 def Plugins(**kwargs):
-	if getImageDistro() in ("openatv", "openbh"):
+	if IMAGEDISTRO in ("openatv", "openbh"):
 		list = [
 			PluginDescriptor(
 				where=PluginDescriptor.WHERE_SESSIONSTART,
@@ -113,7 +118,7 @@ def Plugins(**kwargs):
 			fnc=ipboxclientRecordTimer
 		))
 
-	if not config.ipboxclient.firstconf.value and getHasTuners() == False and not getImageDistro() in ("openatv", "openbh"):
+	if not config.ipboxclient.firstconf.value and getHasTuners() is False and IMAGEDISTRO not in ("openatv", "openbh"):
 		list.append(PluginDescriptor(
 			name=_("IPBox wizard"),
 			where=PluginDescriptor.WHERE_WIZARD,

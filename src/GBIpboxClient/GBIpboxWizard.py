@@ -20,9 +20,7 @@
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Screens.Wizard import Wizard
-from Components.ActionMap import ActionMap
 from Components.Pixmap import Pixmap
 from Components.Sources.Boolean import Boolean
 from Components.config import config
@@ -64,11 +62,11 @@ class GBIpboxWizard(Wizard):
 					scrollbarMode="showOnDemand" />
 
 			<ePixmap pixmap="skin_default/buttons/button_red.png"
-					 position="40,225"
-					 zPosition="0"
-					 size="15,16"
-					 transparent="1"
-					 alphatest="on" />
+					position="40,225"
+					zPosition="0"
+					size="15,16"
+					transparent="1"
+					alphatest="on" />
 
 			<widget name="languagetext"
 					position="55,225"

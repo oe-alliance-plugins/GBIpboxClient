@@ -20,16 +20,13 @@
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Components.config import config
 
-from .GBIpboxLocale import _
 
 from enigma import eEPGCache, eDVBDB
 
 from xml.dom import minidom
 import re
-import os
 
 try:
 	from urllib.parse import urlencode, quote

@@ -20,15 +20,19 @@
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Screens.Screen import Screen
-from Screens.MessageBox import MessageBox
 
 from Components.ActionMap import ActionMap
 from Components.Label import Label
 
 from .GBIpboxLocale import _
-from boxbranding import getImageDistro
+
+try:
+	from Components.SystemInfo import BoxInfo
+	IMAGEDISTRO = BoxInfo.getItem("distro")
+except ImportError:
+	from boxbranding import getImageDistro
+	IMAGEDISTRO = getImageDistro()
 
 
 class GBIpboxAbout(Screen):
@@ -44,7 +48,7 @@ class GBIpboxAbout(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 
-		if getImageDistro() in ("openatv"):
+		if IMAGEDISTRO in ("openatv"):
 			self.setTitle(_('IPBOX Client About'))
 			about = "IPBOX Client 1.0""\n"
 		else:

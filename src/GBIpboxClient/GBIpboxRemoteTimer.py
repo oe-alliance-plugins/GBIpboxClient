@@ -21,17 +21,15 @@ from __future__ import print_function
 #
 #############################################################################
 
-from __future__ import absolute_import
 from Components.config import config
 from Components.TimerSanityCheck import TimerSanityCheck
-from RecordTimer import RecordTimerEntry, AFTEREVENT
+from RecordTimer import RecordTimerEntry
 from ServiceReference import ServiceReference
 from timer import TimerEntry
 
-from .GBIpboxLocale import _
 
 from xml.dom import minidom
-from time import localtime, strftime, ctime, time
+from time import localtime, time
 from bisect import insort
 
 try:
@@ -40,9 +38,6 @@ try:
 except ImportError:
 	from urllib import urlencode
 	from urllib2 import urlopen
-
-import re
-import os
 
 
 def getValueFromNode(event, key):
