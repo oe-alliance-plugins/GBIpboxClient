@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-05 14:38+0000\n"
+"POT-Creation-Date: 2026-05-10 06:34+0200\n"
 "PO-Revision-Date: 2016-01-25 22:12+0100\n"
 "Last-Translator: oe-a >\n"
 "Language-Team: oe-a\n"
@@ -16,164 +16,217 @@ msgstr ""
 "X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../src/plugin.py:41
+#: ../plugin.py:49
 msgid "30 Days"
 msgstr "30 Tage"
 
-#: ../src/GBIpboxMenu.py:134
-msgid "About"
-msgstr "Über"
-
-#: ../src/GBIpboxMenu.py:164
-msgid "Authentication"
-msgstr "Authentifizierung"
-
-#: ../src/GBIpboxMenu.py:131 ../src/GBIpboxMenu.py:230 ../src/GBIpboxWizard.py:175
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: ../src/GBIpboxMenu.py:276
-msgid "Cannot download data. Please check your configuration"
-msgstr "Daten können nicht geladen werden. Bitte Konfiguration prüfen"
-
-#: ../src/GBIpboxMenu.py:231
-msgid "Choose your main device"
-msgstr "Gerät wählen"
-
-#: ../src/plugin.py:41
-msgid "Daily"
-msgstr "Täglich"
-
-#: ../src/GBIpboxMenu.py:153
-msgid "Do you want to scan for a server?"
-msgstr "Nach einem Gerät suchen?"
-
-#: ../src/GBIpboxMenu.py:272
-msgid "Download completed"
-msgstr "Herunterladen beendet"
-
-#: ../src/GBIpboxMenu.py:129 ../src/GBIpboxWizard.py:146
-msgid "GBIpbox Client"
-msgstr ""
-
-#: ../src/GBIpboxAbout.py:44
-msgid "GBIpbox Client About"
-msgstr "Über GBIpbox Client"
-
-#: ../src/plugin.py:46
-msgid "GBIpboxClient"
-msgstr ""
-
-#: ../src/plugin.py:58 ../src/plugin.py:64
-msgid "Gigablue IPBox network client"
-msgstr ""
-
-#: ../src/GBIpboxMenu.py:162
-msgid "HTTP port"
-msgstr "HTTP Port"
-
-#: ../src/GBIpboxMenu.py:161
-msgid "Host"
-msgstr ""
-
-#: ../src/plugin.py:70
-msgid "IPBox wizard"
-msgstr "IPBox Assistent"
-
-#: ../src/GBIpboxMenu.py:234
-msgid "No devices found"
-msgstr "kein Gerät gefunden"
-
-#: ../src/GBIpboxMenu.py:167
-msgid "Password"
-msgstr "Passwort"
-
-#: ../src/GBIpboxMenu.py:196
-msgid "Please wait while download is in progress.\nNOTE: If you have parental control enabled on remote box, the local settings will be overwritten."
-msgstr "Es wird heruntergeladen. Bitte warten.\nHinweis: Wenn auf der Serverbox der Jugendschutz aktiviert ist, werden Ihre getroffenen Jugendschutz Einstellungen überschrieben."
-
-#: ../src/GBIpboxMenu.py:210
-msgid "Please wait while scan is in progress.\nThis operation may take a while"
-msgstr "Es wird gesucht.\nDas kann etwas dauern"
-
-#: ../src/GBIpboxMenu.py:172
-msgid "Repeat how often"
-msgstr "Wiederholung wie oft"
-
-#: ../src/GBIpboxMenu.py:132
-msgid "Save"
-msgstr "Speichern"
-
-#: ../src/GBIpboxMenu.py:133
-msgid "Scan"
-msgstr "Suchen"
-
-#: ../src/GBIpboxMenu.py:169
-msgid "Schedule sync"
-msgstr "Plane Synchronisierung"
-
-#: ../src/GBIpboxMenu.py:163
-msgid "Streaming port"
-msgstr "Streaming Port"
-
-#: ../src/GBIpboxMenu.py:171
-msgid "Time of sync to start"
-msgstr "Startzeit Synchronisierung"
-
-#: ../src/GBIpboxMenu.py:168
-msgid "Use remote HDD"
-msgstr "Entfernte Festplatte benutzen"
-
-#: ../src/GBIpboxMenu.py:166
-msgid "Username"
-msgstr "Benutzername"
-
-#: ../src/plugin.py:41
-msgid "Weekly"
-msgstr "Wöchentlich"
-
-#: ../src/gbipboxwizard.xml
+#: ../gbipboxwizard.xml
 msgid "Abort this Wizard"
 msgstr "Diesen Assistent abbrechen"
 
-#: ../src/gbipboxwizard.xml
-msgid "Cannot download data! Sorry, we can't configure your ipbox right now.\nPlease press OK to close this Wizard."
-msgstr "Herunterladen fehlgeschlagen! Es tut uns leid, aber Wir können Ihre IPbox momentan nicht konfigurieren.\nBitte drücken Sie OK um diesen Assistent zu beenden."
+#: ../GBIpboxMenu.py:159
+msgid "About"
+msgstr "Über"
 
-#: ../src/gbipboxwizard.xml
-msgid "No devices found! Sorry, we can't configure your ipbox right now.\nPlease press OK to close this Wizard."
-msgstr "Keine Geräte gefunden! Es tut uns leid, aber Wir können Ihre IPbox momentan nicht konfigurieren.\nBitte drücken Sie OK um diesen Assistent zu beenden."
+#: ../GBIpboxMenu.py:189
+msgid "Authentication"
+msgstr "Authentifizierung"
 
-#: ../src/gbipboxwizard.xml
-msgid "Please wait while scan is in progress.\nThis operation may take a while."
-msgstr "Bitte warten Sie während der Suchlauf läuft.\nDieser Vorgang kann etwas dauern."
+#: ../GBIpboxMenu.py:156 ../GBIpboxMenu.py:256 ../GBIpboxWizard.py:178
+msgid "Cancel"
+msgstr "Abbrechen"
 
-#: ../src/gbipboxwizard.xml
+#: ../gbipboxwizard.xml
+msgid ""
+"Cannot download data! Sorry, we can't configure your ipbox right now.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Herunterladen fehlgeschlagen! Es tut uns leid, aber Wir können Ihre IPbox momentan nicht konfigurieren.\n"
+"Bitte drücken Sie OK um diesen Assistent zu beenden."
+
+#: ../GBIpboxMenu.py:311
+msgid "Cannot download data. Please check your configuration"
+msgstr "Daten können nicht geladen werden. Bitte Konfiguration prüfen"
+
+#: ../GBIpboxMenu.py:257 ../gbipboxwizard.xml
+msgid "Choose your main device"
+msgstr "Gerät wählen"
+
+#: ../plugin.py:49
+msgid "Daily"
+msgstr "Täglich"
+
+#: ../GBIpboxMenu.py:178
+msgid "Do you want to scan for a server?"
+msgstr "Nach einem Gerät suchen?"
+
+#: ../GBIpboxMenu.py:307
+msgid "Download completed"
+msgstr "Herunterladen beendet"
+
+#: ../GBIpboxMenu.py:152 ../GBIpboxWizard.py:146
+msgid "GBIpbox Client"
+msgstr ""
+
+#: ../GBIpboxAbout.py:55
+msgid "GBIpbox Client About"
+msgstr "Über GBIpbox Client"
+
+#: ../plugin.py:65
+msgid "GBIpboxClient"
+msgstr ""
+
+#: ../plugin.py:102 ../plugin.py:108
+msgid "Gigablue IPBox network client"
+msgstr ""
+
+#: ../GBIpboxMenu.py:187
+msgid "HTTP port"
+msgstr "HTTP Port"
+
+#: ../GBIpboxMenu.py:186
+msgid "Host"
+msgstr ""
+
+#: ../GBIpboxMenu.py:150 ../plugin.py:61
+msgid "IPBOX Client"
+msgstr ""
+
+#: ../GBIpboxAbout.py:52
+#, fuzzy
+msgid "IPBOX Client About"
+msgstr "Über GBIpbox Client"
+
+#: ../plugin.py:88
+msgid "IPBox network client"
+msgstr ""
+
+#: ../plugin.py:123
+msgid "IPBox wizard"
+msgstr "IPBox Assistent"
+
+#: ../GBIpboxMenu.py:155
+msgid "NOTE: the remote HDD feature require samba installed on server box."
+msgstr "Info: Die Serverbox Festplattenfunktion benötigt samba auf der Serverbox."
+
+#: ../GBIpboxMenu.py:260
+msgid "No devices found"
+msgstr "kein Gerät gefunden"
+
+#: ../gbipboxwizard.xml
+msgid ""
+"No devices found! Sorry, we can't configure your ipbox right now.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Keine Geräte gefunden! Es tut uns leid, aber Wir können Ihre IPbox momentan nicht konfigurieren.\n"
+"Bitte drücken Sie OK um diesen Assistent zu beenden."
+
+#: ../GBIpboxMenu.py:192
+msgid "Password"
+msgstr "Passwort"
+
+#: ../GBIpboxMenu.py:222 ../gbipboxwizard.xml
+msgid ""
+"Please wait while download is in progress.\n"
+"NOTE: If you have parental control enabled on remote box, the local settings will be overwritten."
+msgstr ""
+"Es wird heruntergeladen. Bitte warten.\n"
+"Hinweis: Wenn auf der Serverbox der Jugendschutz aktiviert ist, werden Ihre getroffenen Jugendschutz Einstellungen überschrieben."
+
+#: ../GBIpboxMenu.py:236
+msgid ""
+"Please wait while scan is in progress.\n"
+"This operation may take a while"
+msgstr ""
+"Es wird gesucht.\n"
+"Das kann etwas dauern"
+
+#: ../gbipboxwizard.xml
+msgid ""
+"Please wait while scan is in progress.\n"
+"This operation may take a while."
+msgstr ""
+"Bitte warten Sie während der Suchlauf läuft.\n"
+"Dieser Vorgang kann etwas dauern."
+
+#: ../GBIpboxMenu.py:198
+msgid "Repeat how often"
+msgstr "Wiederholung wie oft"
+
+#: ../GBIpboxMenu.py:157
+msgid "Save"
+msgstr "Speichern"
+
+#: ../GBIpboxMenu.py:158
+msgid "Scan"
+msgstr "Suchen"
+
+#: ../gbipboxwizard.xml
 msgid "Scan for a server"
 msgstr "Suche einen Server"
 
-#: ../src/gbipboxwizard.xml
-msgid "Thank you for using the wizard. Your ipbox is now configured.\nPlease press OK to continue."
-msgstr "Danke das Sie den Assistent benutzt haben. Ihre IPbox ist nun konfiguriert.\nBitte drücken Sie OK um fortzufahren."
+#: ../GBIpboxMenu.py:195
+msgid "Schedule sync"
+msgstr "Plane Synchronisierung"
 
-#: ../src/gbipboxwizard.xml
+#: ../GBIpboxMenu.py:188
+msgid "Streaming port"
+msgstr "Streaming Port"
+
+#: ../gbipboxwizard.xml
+msgid ""
+"Thank you for using the wizard. Your ipbox is now configured.\n"
+"Please press OK to continue."
+msgstr ""
+"Danke das Sie den Assistent benutzt haben. Ihre IPbox ist nun konfiguriert.\n"
+"Bitte drücken Sie OK um fortzufahren."
+
+#: ../GBIpboxMenu.py:197
+msgid "Time of sync to start"
+msgstr "Startzeit Synchronisierung"
+
+#: ../GBIpboxMenu.py:305
+msgid "To apply new settings, you need to reboot your STB. Do you want reboot it now?"
+msgstr ""
+
+#: ../gbipboxwizard.xml
 msgid "Try to download again"
 msgstr "Starte den Download erneut"
 
-#: ../src/gbipboxwizard.xml
+#: ../gbipboxwizard.xml
 msgid "Try to scan again"
 msgstr "Starte den Suchlauf erneut"
 
-#: ../src/gbipboxwizard.xml
-msgid "Welcome.\n\nThis Wizard will help you to configure your ipbox."
-msgstr "Willkommen.\n\nDieser Assistent wird Sie bei der Konfiguration der IPbox unterstützen."
+#: ../GBIpboxMenu.py:193
+msgid "Use remote HDD"
+msgstr "Entfernte Festplatte benutzen"
 
-#: ../src/gbipboxwizard.xml
-msgid "Your ipbox is not configured.\nPlease press OK to close this Wizard."
-msgstr "Ihre IPbox ist nicht konfiguriert.\nBitte drücken Sie OK um diesen Assistent zu beenden."
-
+#: ../GBIpboxMenu.py:194
 msgid "Use remote timers"
 msgstr "Verwende Serverbox Timer"
 
-msgid "NOTE: the remote HDD feature require samba installed on server box."
-msgstr "Info: Die Serverbox Festplattenfunktion benötigt samba auf der Serverbox."
+#: ../GBIpboxMenu.py:191
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../plugin.py:49
+msgid "Weekly"
+msgstr "Wöchentlich"
+
+#: ../gbipboxwizard.xml
+msgid ""
+"Welcome.\n"
+"\n"
+"This Wizard will help you to configure your ipbox."
+msgstr ""
+"Willkommen.\n"
+"\n"
+"Dieser Assistent wird Sie bei der Konfiguration der IPbox unterstützen."
+
+#: ../gbipboxwizard.xml
+msgid ""
+"Your ipbox is not configured.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Ihre IPbox ist nicht konfiguriert.\n"
+"Bitte drücken Sie OK um diesen Assistent zu beenden."
